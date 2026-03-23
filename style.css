@@ -1,0 +1,78 @@
+/* Remove default spacing from everything */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the whole page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4ff;
+  color: #333;
+  padding: 20px;
+}
+
+/* Search bar layout */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Text input styling */
+#cityInput {
+  flex: 1;
+  padding: 10px 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Search button styling */
+#searchBtn {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Hide loader and error by default */
+#loader {
+  display: none;
+  text-align: center;
+  color: #888;
+  margin: 20px 0;
+}
+
+#errorBox {
+  display: none;
+  color: red;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Weather cards grid */
+#weatherGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  #weatherGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  #weatherGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
