@@ -76,3 +76,22 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #2563eb;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}

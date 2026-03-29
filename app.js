@@ -34,7 +34,7 @@ async function getWeather(city) {
     // Hide loader
     loader.style.display = 'none'
 
-    if (data.cod !== 200 && data.cod !== "200") { {
+    if  (data.cod !== 200 && data.cod !== "200"){
       errorBox.style.display = 'block'
       errorBox.textContent = 'City not found! Please try again.'
       return
