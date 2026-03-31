@@ -1,4 +1,4 @@
-# 🌤️ Weather Dashboard
+# Weather Dashboard
 
 A responsive web application that displays real-time weather data for cities around the world using the OpenWeatherMap API.
 
