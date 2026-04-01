@@ -34,5 +34,5 @@ weather-dashboard/
 3. Replace `YOUR_API_KEY` in `app.js` with your key
 4. Open `index.html` in any browser — no build step needed
 
-## Author
+#Author
 Sankalp Tripathi
