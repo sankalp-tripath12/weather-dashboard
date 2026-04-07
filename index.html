@@ -1,28 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlRoot">
+<!--
+  lang="en" tells the browser this page is in English.
+  id="htmlRoot" is used by JavaScript to toggle dark mode class.
+-->
 <head>
   <meta charset="UTF-8" />
+  <!-- Makes the page responsive on mobile screens -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Weather Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Search Bar -->
+  <!-- ===== TOP BAR: Title + Dark Mode Toggle ===== -->
+  <div class="top-bar">
+    <h1 class="app-title">⛅ Weather Dashboard</h1>
+    <!-- Dark mode button: clicking this toggles light/dark theme -->
+    <button id="darkToggle">🌙 Dark Mode</button>
+  </div>
+
+  <!-- ===== SEARCH BAR ===== -->
   <div class="search-bar">
+    <!-- User types city name here -->
     <input type="text" id="cityInput" placeholder="Enter city name..." />
+    <!-- Clicking this fetches weather for the typed city -->
     <button id="searchBtn">Search</button>
   </div>
 
-  <!-- Loading Message -->
-  <div id="loader">Loading...</div>
+  <!-- ===== CONTROLS: Filter + Sort ===== -->
+  <div class="controls">
 
-  <!-- Error Message -->
+    <!-- Filter dropdown: filters cards by weather condition -->
+    <select id="filter">
+      <option value="all">All Weather</option>
+      <option value="Clear">Clear ☀️</option>
+      <option value="Clouds">Clouds ☁️</option>
+      <option value="Rain">Rain 🌧️</option>
+    </select>
+
+    <!-- Sort dropdown: sorts cards by temperature -->
+    <select id="sort">
+      <option value="">Sort by Temp</option>
+      <option value="asc">Temp Low → High</option>
+      <option value="desc">Temp High → Low</option>
+    </select>
+
+  </div>
+
+  <!-- ===== LOADER: Shown while API call is in progress ===== -->
+  <div id="loader">⏳ Loading...</div>
+
+  <!-- ===== ERROR BOX: Shown when city not found or network fails ===== -->
   <div id="errorBox"></div>
 
-  <!-- Weather Cards appear here -->
+  <!-- ===== WEATHER CARDS: JS dynamically inserts cards here ===== -->
   <div id="weatherGrid"></div>
 
+  <!-- ===== FAVORITES SECTION ===== -->
+  <!-- This section shows cities saved to localStorage as favorites -->
+  <div id="favoritesSection">
+    <h2 id="favHeading">⭐ Favorites</h2>
+    <!-- Favorite city buttons will appear here -->
+    <div id="favoritesList"></div>
+  </div>
+
+  <!-- Link to our JavaScript file — placed at bottom so HTML loads first -->
   <script src="app.js"></script>
 </body>
 </html>
